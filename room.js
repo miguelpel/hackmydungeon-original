@@ -38,6 +38,7 @@ class Character {
     die() {
         console.log(this.name + ' dies.');
     }
+    g
 };
 
 class Player extends Character {
