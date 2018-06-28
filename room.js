@@ -22,21 +22,25 @@ class Character {
 
     getHit(weapon) {
         if (this.immunity === weapon.name) {
-            console.log(this.name + ' is immune to ' + weapon.name);
+            console.log(`${this.name} is immune to ${weapon.name}`);
+            //console.log(this.name + ' is immune to ' + weapon.name);
         } else {
             this.lifePoints -= weapon.attackPoints;
             if (this.lifePoints <= 0) this.lifePoints = 0;
-            console.log(this.name + ' is hit and looses ' + weapon.attackPoints);
+            console.log(`${this.name} is hit and looses ${weapon.attackPoints}`);
+            //console.log(this.name + ' is hit and looses ' + weapon.attackPoints);
         }
     }
 
     displayStats() {
-        let stats = this.name + ' :<br>' + 'Life: ' + this.lifePoints + '<br>Weapon: ' + this.weapon.name;
+        let stats = `${this.name}<br>Life: ${this.lifePoints}<br>Weapon: ${this.weapon.name}`;
+        //let stats = this.name + ' :<br>' + 'Life: ' + this.lifePoints + '<br>Weapon: ' + this.weapon.name;
         console.log(stats);
     }
 
     die() {
-        console.log(this.name + ' dies.');
+        console.log(`${this.name} dies.`);
+        //console.log(this.name + ' dies.');
     }
 };
 
@@ -48,7 +52,8 @@ class Player extends Character {
 
     pickObject(object) {
         this.weapon = object;
-        console.log(this.name + ' picks up ' + object.name)
+        console.log(`${this.name} picks up ${object.name}`);
+        //console.log(this.name + ' picks up ' + object.name)
     }
 }
 

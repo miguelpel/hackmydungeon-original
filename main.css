@@ -27,7 +27,7 @@ pre>code {
 }
 
 code {
-    height: 300px;
+    height: 200px;
     overflow-wrap: normal;
     overflow-y: auto;
 }
