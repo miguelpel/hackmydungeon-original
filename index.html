@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>HackMyDungeon</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- PRISM -->
+    <link rel="stylesheet" href="libs/prism/prism.css">
+
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 </head>
 
@@ -16,17 +20,25 @@
             <h6 class="enemy" id="enemy">Enemy</h6> -->
         </div>
         <pre>
-        <code id="console"></code>
+        <code id="console" class="javascript language-javascript">
+        </code>
         </pre>
         <div class="controller">
-            <input type="text">
+            <input type="text" placeholder="Type commands here...">
             <button id="runCode">Run</button>
             <button id="viewSource">See Room Source Code</button>
         </div>
-        <script src="./room.js"></script>
-        <!-- <script src="./gameLoop.js"></script> -->
-        <script src="./main.js"></script>
+        
     </div>
+    <!-- PRISM -->
+    <script src="libs/prism/prismify.js"></script>
+
+    <!-- <script src="./consoleIIFE.js"></script>
+    <script src="./game.js"></script> -->
+
+    <script src="./rooms/room.js"></script>
+        <!-- <script src="./gameLoop.js"></script> -->
+        <script src="/main.js"></script>
 </body>
 
 </html>

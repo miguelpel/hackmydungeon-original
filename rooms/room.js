@@ -11,7 +11,6 @@ class Character {
         this.weapon = weapon || new Knife();
         this.elm.innerHTML = name;
         document.getElementById('arena').appendChild(this.elm);
-        // this.elm.addEventListener('click', this.displayStats.bind(this));
         this.elm.addEventListener('click', evt => this.displayStats(evt));
     }
 
@@ -23,37 +22,31 @@ class Character {
     getHit(weapon) {
         if (this.immunity === weapon.name) {
             console.log(`${this.name} is immune to ${weapon.name}`);
-            //console.log(this.name + ' is immune to ' + weapon.name);
         } else {
             this.lifePoints -= weapon.attackPoints;
             if (this.lifePoints <= 0) this.lifePoints = 0;
             console.log(`${this.name} is hit and looses ${weapon.attackPoints}`);
-            //console.log(this.name + ' is hit and looses ' + weapon.attackPoints);
         }
     }
 
     displayStats() {
         let stats = `${this.name}<br>Life: ${this.lifePoints}<br>Weapon: ${this.weapon.name}`;
-        //let stats = this.name + ' :<br>' + 'Life: ' + this.lifePoints + '<br>Weapon: ' + this.weapon.name;
         console.log(stats);
     }
 
     die() {
         console.log(`${this.name} dies.`);
-        //console.log(this.name + ' dies.');
     }
 };
 
 class Player extends Character {
     constructor(cat, name) {
         super(cat, name, 20);
-        // document.getElementById('player').innerHTML = name;
     }
 
     pickObject(object) {
         this.weapon = object;
         console.log(`${this.name} picks up ${object.name}`);
-        //console.log(this.name + ' picks up ' + object.name)
     }
 }
 
@@ -61,7 +54,6 @@ class Goblin extends Character {
     constructor(cat, name) {
         super(cat, name, 15, 'knife');
         this.categorie = 'goblin';
-        // document.getElementById('ennemy').innerHTML = name;
     }
 
     selectAction(player) {
