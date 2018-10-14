@@ -130,4 +130,4 @@ function checkKey(e) {
 
 }
 
-spawnPlayer({x:32,y:12});
+spawnPlayer({x:32,y:11});
